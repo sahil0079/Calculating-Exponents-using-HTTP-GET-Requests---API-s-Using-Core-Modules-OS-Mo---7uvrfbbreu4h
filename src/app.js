@@ -4,7 +4,6 @@ const url = require('url');
 const server = http.createServer((req, res) => {
   const parsedUrl = url.parse(req.url, true);
 
-  console.log('parsedUrl', parsedUrl)
   const { pathname, query } = parsedUrl;
   if (req.method === 'GET' && pathname === '/') {
     const num1 = parseInt(query.num1);
